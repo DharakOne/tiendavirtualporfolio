@@ -9,6 +9,7 @@ export default function App (){
             <AppBar/>
             <Home/>
             <Footer/>
+
         </div>
     )
 }

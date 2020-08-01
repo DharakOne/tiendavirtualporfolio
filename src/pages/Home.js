@@ -4,7 +4,6 @@ import CardProducts from "./componets/CardProducts"
 
 
 const ContHome = Styled.div`
-    background:aqua;
 `
 
 export default function Home() {
