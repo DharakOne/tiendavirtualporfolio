@@ -2,53 +2,70 @@ import React from "react"
 import Styled from "styled-components"
 
 const CardProductsCont = Styled.div`
-    background:white;
-    border: 1px solid orange;
-    border-radius:10px;
-    margin: 5px;
-    display:grid;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 305px;
+    height: 448px;
+    background: #E8E8E8;
+    border-radius: 14px;
+    margin: 5px 2px;
 `
-const Name = Styled.h3`
-    font-size: 2rem;
-    margin-block-start: 0.5rem;
-    margin-block-end: 0.2rem;
 
+const Price = Styled.h2`
+    display: flex;
+    flex-direction: column;
+    background: #FAC87E;
+    border-radius: 12px;
+    flex: none;
+    order: 0;
+    align-self: flex-end;
+    margin: 10px;
+    padding: 10px;
 `
-const Image = Styled.img`
-    width:80%;
-`
-const InfoBarC=Styled.div`
-    background:#007fff;
-    display:flex;
-    width:101%;
-    border-radius: 0 0 10px 10px; 
+const Info = Styled.div`
+    display: flex;
+    width: 295px;
+    height: 95px;
+    padding:0 5px;
+    background: #F8F8F8;
+    border-radius: 0 0 14px 14px;
+    align-content:center;
     justify-content:center;
+
+    
+    flex: none;
+    align-self: center;
+    justify-self:flex-end;
 `
 
-const InfoC = Styled.div`
-    display:grid;
-    grid-template-columns: auto auto;
-    column-gap:5px;
-    align-items : center;
-    justify-items: center;
-    margin:5px;
-    color:white;
-`
-const InfoT = Styled.h4`
+const Name = Styled.a`
+    font-family: Arsenal;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
     
-    font-size:1.5rem;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    color:#1c1c1c;
+    color: #3687FF;
+    
+    
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 0;
+    align-self: center;
+    margin: 0px 10px;
+    text-decoration:none;
 `
-const InfoA = Styled.h5`
-    display:flex;
-    aling-items:center;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    font-size:1.2rem;
+
+const Image = Styled.img`
+    border-radius:10px;
+    margin:10px 30px;
+    height: 268px;
+    flex: none;
+    align-self: center;
 `
+
 
 
 export default function CardProducts(
@@ -57,19 +74,13 @@ export default function CardProducts(
 
     return (
         <CardProductsCont>
-            <Name>{name}</Name>
+            <Price>30$</Price>
             <Image src="./images/Lavadora.jpg" name={imageDirection} />
-            <InfoBarC>
-            <InfoC>
-                <InfoT>Precio:</InfoT>
-                <InfoA>{price}</InfoA>
-            </InfoC>
-
-            <InfoC>
-                <InfoT>Stock:</InfoT>
-                <InfoA>{stock}</InfoA>
-            </InfoC>
-            </InfoBarC>
+            <Info>
+                <Name href="/sd">
+                    {name}
+                </Name>
+            </Info>
         </CardProductsCont>
     )
 }
