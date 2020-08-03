@@ -2,17 +2,29 @@ import React from "react"
 import Styled from "styled-components"
 
 const FooterCont = Styled.div`
-    displa:flex;
+    displa:grid;
+    background: #FAC87E;
+    justyify-content:center;
+    padding:10px 30px;
+
 `
 const Contenedor = Styled.div`
     width:100%;
 `
-const Title = Styled.h2`
+const Title = Styled.h1`
     white-space: normal; 
+    text-align:center;
+    color:rgb(36, 36, 36);
 `
-const SubTitle = Styled.h5``
+const SubTitle = Styled.h2`
+    color:rgb(36, 36, 36);
+
+`
 const Typography = Styled.p``
-const Link = Styled.a``
+const Link = Styled.a`
+    text-decoration:none;
+    color:rgb(64, 115, 255);
+`
 
 
 export default function Footer() {

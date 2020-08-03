@@ -27,7 +27,7 @@ const Info = Styled.div`
     width: 295px;
     height: 95px;
     padding:0 5px;
-    background: #F8F8F8;
+    background:  rgb(238, 238, 238);
     border-radius: 0 0 14px 14px;
     align-content:center;
     justify-content:center;
@@ -49,7 +49,6 @@ const Name = Styled.a`
     color: #3687FF;
     
     
-    /* Inside Auto Layout */
     
     flex: none;
     order: 0;
