@@ -16,7 +16,7 @@ const ContHome = Styled.div`
 export default function Home() {
     return (
         <ContHome>
-            {[0, 1, 2, 3].map(i => <CardProducts key={i}
+            {[0, 1, 2, 3,4,5].map(i => <CardProducts key={i}
                 imageDirection="qqq"
                 name="Lavadora Frese  60kg"
                 price={"300$"}

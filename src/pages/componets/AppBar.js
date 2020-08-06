@@ -13,14 +13,10 @@ const ContAppBar = Styled.div`
 const LinkBrand = Styled.a`
     display:flex;
     justify-content:center;
-    font-size:2rem;
+    font-size:2.5rem;
     font-weight: bold;
     color:white;
     text-decoration:none;
-
-    
-
-
 `
 const LinkCont = Styled.div`
     display:grid;
@@ -38,17 +34,13 @@ const Link = Styled.a`
     font-size:1rem;
     background:white; 
     border-radius:5%;
-
-
+    
     &:hover {
         background: rgb(255,255,255,80%);
     }
     &:active{
         background:rgb(255,255,255,40%);
     }
-
-
-
 `
 
 export default function AppBar() {

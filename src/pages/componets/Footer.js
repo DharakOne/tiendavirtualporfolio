@@ -1,12 +1,19 @@
 import React from "react"
 import Styled from "styled-components"
+import FooterBrand from "./FooterBrand"
+
+import IconStyle from  "../../utils/icons/IconStyle"
+import { ReactComponent as IconEmail } from "../../utils/icons/email.svg"
+import { ReactComponent as IconWhatsapp } from "../../utils/icons/whatsapp.svg"
+
+
 
 const FooterCont = Styled.div`
-    displa:grid;
+    display:grid;
     background: #FAC87E;
-    justyify-content:center;
+    justify-content: space-around;
     padding:10px 30px;
-
+    grid-template-columns:1fr;
 `
 const Contenedor = Styled.div`
     width:100%;
@@ -20,7 +27,10 @@ const SubTitle = Styled.h2`
     color:rgb(36, 36, 36);
 
 `
-const Typography = Styled.p``
+const Typography = Styled.div`
+    display:flex;
+    align-items: center;
+`
 const Link = Styled.a`
     text-decoration:none;
     color:rgb(64, 115, 255);
@@ -30,16 +40,22 @@ const Link = Styled.a`
 export default function Footer() {
     return (
         <FooterCont>
+            <FooterBrand />
             <Contenedor>
                 <Title>
                     Contactenos
                 </Title>
                 <SubTitle>Servicio al cliente</SubTitle>
-                <Typography> (504)+ 9465-5634</Typography>
-                <Typography>storejunior@gmail.com</Typography>
-                <SubTitle>Escribenos</SubTitle>
                 <Typography>
-                    8:00 am  a 6:00 pm de lunes a Sabado
+                       (504)+ 9465-5634
+                     </Typography>
+                <Typography>
+                    <IconStyle><IconEmail /></IconStyle>
+                    storejunior@gmail.com
+                    </Typography>
+                    <SubTitle>Horario de atencion</SubTitle>
+                <Typography>
+                    Lunes a Sabado  de 8:00 am  a 6:00 pm 
                 </Typography>
             </Contenedor>
             <Contenedor>
@@ -65,11 +81,10 @@ export default function Footer() {
                     <Link href="/PoliticasDeDevolucion" >Politicas de devolucion</Link>
                 </SubTitle>
                 <SubTitle>
-                    <Link href="/QuieneSomos">Quienes  somos</Link>
+                    <Link href="/QuieneSomos">Quienes  somos?</Link>
                 </SubTitle>
- 
+
             </Contenedor>
         </FooterCont>
     )
 }
-
