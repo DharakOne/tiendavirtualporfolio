@@ -6,9 +6,15 @@ const ContAppBar = Styled.div`
     display:grid;
     grid-template-rows:auto auto;
     background:#FF7F50;
-    padding: 10px;
+    padding: 10px 0px;
     justify-content:center;
-    row-gap: 7px;
+    box-shadow: 0px 0px 5px black;
+
+    @media (min-width: 670px) {
+        justify-content:space-around;
+        grid-template-rows:auto;
+        grid-template-columns:auto auto;
+    }
 `
 const LinkBrand = Styled.a`
     display:flex;
@@ -22,6 +28,9 @@ const LinkCont = Styled.div`
     display:grid;
     grid-template-columns:auto auto;
     column-gap: 10px;
+    @media (min-width: 670px) {
+
+    }
 `
 const Link = Styled.a`
     display:flex;

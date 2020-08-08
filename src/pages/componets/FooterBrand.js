@@ -18,7 +18,7 @@ const Box=Styled.div`
     width:130px;
     height:130px;
     margin:30px;
-
+    border-radius:10px;
 `
 
 export default function FooterBrand(){
